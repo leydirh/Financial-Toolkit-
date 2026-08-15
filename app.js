@@ -1,14 +1,13 @@
-// Ray's Financial Toolkit App Logic - Light Blue Theme
+// Ray's Financial Toolkit App Logic
 
 document.addEventListener('DOMContentLoaded', () => {
   initCharts();
   initBottomNav();
 });
 
-// Chart.js Initialization with Light Blue & Clean White Styling
+// Chart.js Initialization with Vibrant Multi-Color Doughnut Palette
 function initCharts() {
   const doughnutCtx = document.getElementById('expenseDoughnutChart');
-  const barCtx = document.getElementById('expenseBarChart');
 
   if (doughnutCtx) {
     new Chart(doughnutCtx, {
@@ -27,17 +26,18 @@ function initCharts() {
         datasets: [{
           data: [14180, 27120, 840, 1100, 600, 900, 2400, 500],
           backgroundColor: [
-            '#1d4ed8', // Royal Blue
-            '#0284c7', // Ocean Blue
-            '#38bdf8', // Light Cyan
-            '#60a5fa', // Sky Blue
-            '#818cf8', // Indigo Tint
-            '#a78bfa', // Soft Purple
-            '#2563eb', // Pure Blue
-            '#64748b'  // Slate Muted
+            '#2563eb', // Royal Blue (Tuition)
+            '#10b981', // Emerald Green (Housing & Food)
+            '#f59e0b', // Amber Gold (Transportation)
+            '#ef4444', // Coral Red (Academic Supplies)
+            '#8b5cf6', // Vivid Purple (Clothing)
+            '#06b6d4', // Cyan (Phone Plan)
+            '#ec4899', // Rose Pink (Entertainment)
+            '#6366f1'  // Indigo (Emergency Buffer)
           ],
           borderColor: '#ffffff',
-          borderWidth: 3
+          borderWidth: 3,
+          hoverOffset: 6
         }]
       },
       options: {
@@ -48,8 +48,8 @@ function initCharts() {
             position: 'bottom',
             labels: {
               color: '#334155',
-              font: { family: 'Inter', size: 11.5, weight: '500' },
-              padding: 10
+              font: { family: 'Inter', size: 12, weight: '600' },
+              padding: 12
             }
           },
           tooltip: {
@@ -63,53 +63,6 @@ function initCharts() {
                 return ` ${label}: $${value.toLocaleString()}`;
               }
             }
-          }
-        }
-      }
-    });
-  }
-
-  if (barCtx) {
-    new Chart(barCtx, {
-      type: 'bar',
-      data: {
-        labels: ['Tuition', 'Housing & Meals', 'Transit & Tech', 'Personal & Emergency'],
-        datasets: [
-          {
-            label: 'Option A: Chestnut Dorm ($27,120)',
-            data: [14180, 27120, 1940, 3500],
-            backgroundColor: '#1d4ed8',
-            borderRadius: 6
-          },
-          {
-            label: 'Option B: Off-Campus Apartment ($13,200)',
-            data: [14180, 13200, 1940, 3500],
-            backgroundColor: '#38bdf8',
-            borderRadius: 6
-          }
-        ]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-          x: {
-            grid: { color: 'rgba(0, 0, 0, 0.05)' },
-            ticks: { color: '#334155', font: { family: 'Inter', weight: '500' } }
-          },
-          y: {
-            grid: { color: 'rgba(0, 0, 0, 0.05)' },
-            ticks: {
-              color: '#334155',
-              font: { family: 'Inter', weight: '500' },
-              callback: function(value) { return '$' + value.toLocaleString(); }
-            }
-          }
-        },
-        plugins: {
-          legend: {
-            position: 'top',
-            labels: { color: '#0f172a', font: { family: 'Inter', size: 12, weight: '600' } }
           }
         }
       }
