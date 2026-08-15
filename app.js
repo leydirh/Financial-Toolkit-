@@ -1,11 +1,11 @@
-// Ray's Financial Toolkit Application Script
+// Ray's Financial Toolkit App Logic
 
 document.addEventListener('DOMContentLoaded', () => {
   initCharts();
-  initRespCalculator();
+  initBottomNav();
 });
 
-// Chart.js Initialization
+// Chart.js Initialization with Electric Blue Color Palette
 function initCharts() {
   const doughnutCtx = document.getElementById('expenseDoughnutChart');
   const barCtx = document.getElementById('expenseBarChart');
@@ -17,26 +17,26 @@ function initCharts() {
         labels: [
           'Tuition ($14,180)',
           'Housing & Food ($27,120)',
-          'Transportation ($840/yr)',
+          'Transportation ($840)',
           'Academic Supplies ($1,100)',
-          'Clothing ($600/yr)',
-          'Phone Plan ($900/yr)',
-          'Entertainment ($2,400/yr)',
+          'Clothing ($600)',
+          'Phone Plan ($900)',
+          'Entertainment ($2,400)',
           'Emergency Buffer ($500)'
         ],
         datasets: [{
           data: [14180, 27120, 840, 1100, 600, 900, 2400, 500],
           backgroundColor: [
-            '#002a5c', // U of T Navy
-            '#38bdf8', // Accent Blue
-            '#fbbf24', // Accent Gold
-            '#34d399', // Green
-            '#a78bfa', // Purple
-            '#f472b6', // Pink
-            '#fb923c', // Orange
-            '#94a3b8'  // Muted Slate
+            '#1d4ed8', // Royal Blue
+            '#3b82f6', // Electric Blue
+            '#60a5fa', // Light Blue
+            '#93c5fd', // Soft Sky Blue
+            '#bfdbfe', // Ice Blue
+            '#38bdf8', // Cyan Accent
+            '#1e40af', // Darker Blue
+            '#64748b'  // Slate
           ],
-          borderColor: '#131b2e',
+          borderColor: '#152243',
           borderWidth: 3
         }]
       },
@@ -49,7 +49,7 @@ function initCharts() {
             labels: {
               color: '#94a3b8',
               font: { family: 'Inter', size: 11 },
-              padding: 12
+              padding: 10
             }
           },
           tooltip: {
@@ -75,13 +75,13 @@ function initCharts() {
           {
             label: 'Option A: Chestnut Dorm ($27,120)',
             data: [14180, 27120, 1940, 3500],
-            backgroundColor: '#38bdf8',
+            backgroundColor: '#3b82f6',
             borderRadius: 6
           },
           {
             label: 'Option B: Off-Campus Apartment ($13,200)',
             data: [14180, 13200, 1940, 3500],
-            backgroundColor: '#fbbf24',
+            backgroundColor: '#60a5fa',
             borderRadius: 6
           }
         ]
@@ -106,7 +106,7 @@ function initCharts() {
         plugins: {
           legend: {
             position: 'top',
-            labels: { color: '#f1f5f9', font: { family: 'Inter', size: 12 } }
+            labels: { color: '#f8fafc', font: { family: 'Inter', size: 12 } }
           }
         }
       }
@@ -114,35 +114,42 @@ function initCharts() {
   }
 }
 
-// RESP 20% CESG Grant Calculator Logic
-function initRespCalculator() {
-  const annualInput = document.getElementById('respAnnual');
-  const yearsInput = document.getElementById('respYears');
-  const userDepEl = document.getElementById('respUserDep');
-  const grantEl = document.getElementById('respGrant');
-  const totalEl = document.getElementById('respTotal');
+// Bottom Navigation Dock Interactivity
+function initBottomNav() {
+  const tabs = document.querySelectorAll('.nav-tab');
+  const cards = document.querySelectorAll('.app-card');
 
-  function calculateResp() {
-    if (!annualInput || !yearsInput) return;
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const targetId = tab.getAttribute('data-target');
+      const targetCard = document.getElementById(targetId);
 
-    let annual = parseFloat(annualInput.value) || 0;
-    let years = parseFloat(yearsInput.value) || 0;
+      if (targetCard) {
+        targetCard.scrollIntoView({ behavior: 'smooth' });
 
-    // Cap annual CESG eligible contribution at $2500 max per year according to Canada CESG rules
-    let cesgEligibleAnnual = Math.min(annual, 2500);
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+      }
+    });
+  });
 
-    let userTotalDeposit = annual * years;
-    let totalGrant = (cesgEligibleAnnual * 0.20) * years;
-    let grandTotal = userTotalDeposit + totalGrant;
+  // Highlight bottom nav active tab based on scroll position
+  window.addEventListener('scroll', () => {
+    let currentScroll = window.scrollY + 200;
 
-    if (userDepEl) userDepEl.textContent = `$${userTotalDeposit.toLocaleString()}`;
-    if (grantEl) grantEl.textContent = `$${totalGrant.toLocaleString()}`;
-    if (totalEl) totalEl.textContent = `$${grandTotal.toLocaleString()}`;
-  }
+    cards.forEach(card => {
+      let cardTop = card.offsetTop;
+      let cardHeight = card.offsetHeight;
+      let cardId = card.getAttribute('id');
 
-  if (annualInput && yearsInput) {
-    annualInput.addEventListener('input', calculateResp);
-    yearsInput.addEventListener('input', calculateResp);
-    calculateResp();
-  }
+      if (currentScroll >= cardTop && currentScroll < cardTop + cardHeight) {
+        tabs.forEach(t => {
+          t.classList.remove('active');
+          if (t.getAttribute('data-target') === cardId) {
+            t.classList.add('active');
+          }
+        });
+      }
+    });
+  });
 }

@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ray's Financial Toolkit | U of T St. George</title>
-  <meta name="description" content="A comprehensive financial toolkit for post-secondary education at University of Toronto St. George campus in downtown Toronto. Features estimated program costs, expense charts, quotes, action plan, and references.">
+  <title>Ray's Financial Toolkit</title>
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -19,485 +18,238 @@
   
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="blue-theme">
 
-  <!-- Background Decorative Blur Elements -->
-  <div class="bg-blur bg-blur-1"></div>
-  <div class="bg-blur bg-blur-2"></div>
-  <div class="bg-blur bg-blur-3"></div>
-
-  <!-- Navigation Bar -->
-  <header class="navbar">
-    <div class="container nav-container">
-      <a href="#" class="brand">
-        <div class="brand-logo">
-          <i class="fa-solid fa-graduation-cap"></i>
-        </div>
-        <div class="brand-text">
-          <span class="brand-name">Ray's Financial Toolkit</span>
-          <span class="brand-sub">U of T St. George • Downtown Toronto</span>
-        </div>
-      </a>
-      <nav class="nav-links">
-        <a href="#overview"><i class="fa-solid fa-chart-line"></i> Program Costs</a>
-        <a href="#expenses"><i class="fa-solid fa-wallet"></i> Expenses & Chart</a>
-        <a href="#quotes"><i class="fa-solid fa-quote-left"></i> Quotes</a>
-        <a href="#action-plan"><i class="fa-solid fa-list-check"></i> Action Plan</a>
-        <a href="#references"><i class="fa-solid fa-book-bookmark"></i> References</a>
-      </nav>
+  <!-- Main Header Banner -->
+  <header class="app-header">
+    <div class="header-container">
+      <h1 class="app-title"><i class="fa-solid fa-wallet"></i> Ray's Financial Toolkit</h1>
+      <span class="header-tag"><i class="fa-solid fa-location-dot"></i> U of T St. George • Downtown Toronto</span>
     </div>
   </header>
 
-  <main class="container">
+  <!-- App Main Content: Card Deck Scroll Container -->
+  <main class="card-deck-container">
 
-    <!-- Hero Section -->
-    <section class="hero-section" id="overview">
-      <div class="hero-content">
-        <div class="badge">
-          <i class="fa-solid fa-location-dot"></i> University of Toronto • St. George Campus
+    <!-- Card 1: Overview & Cost -->
+    <section class="app-card active" id="card-overview">
+      <div class="card-header">
+        <h2>Program Cost & Location</h2>
+      </div>
+      <div class="card-body">
+        <div class="location-box">
+          <p><strong>Location:</strong> U of T St. George, in downtown Toronto.</p>
+          <p><strong>Total Estimated Cost of Program:</strong> Around <strong>$28,580</strong> on the lower end, and up to <strong>$34,980</strong>.</p>
         </div>
-        <h1>Ray's Financial Toolkit</h1>
-        <p class="hero-subtitle">
-          A personalized financial roadmap designed for navigating post-secondary education, living expenses, budgeting strategies, and long-term financial preparation in Downtown Toronto.
-        </p>
 
-        <!-- Summary Metrics -->
-        <div class="kpi-grid">
-          <div class="kpi-card highlight">
-            <div class="kpi-icon"><i class="fa-solid fa-calculator"></i></div>
-            <div class="kpi-info">
-              <span class="kpi-label">Total Estimated Cost</span>
-              <span class="kpi-value">$28,580 – $34,980</span>
-              <span class="kpi-note">Annual range based on lower/upper living options</span>
+        <div class="cost-pills-grid">
+          <div class="cost-pill">
+            <span class="pill-label">Lower End Estimate</span>
+            <span class="pill-value">$28,580</span>
+          </div>
+          <div class="cost-pill highlight">
+            <span class="pill-label">Upper End Estimate</span>
+            <span class="pill-value">$34,980</span>
+          </div>
+          <div class="cost-pill">
+            <span class="pill-label">Annual Undergrad Tuition</span>
+            <span class="pill-value">$14,180</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Card 2: Potential List of Expenses -->
+    <section class="app-card" id="card-expenses">
+      <div class="card-header">
+        <h2>Potential List of Expenses</h2>
+      </div>
+      <div class="card-body">
+        <div class="expenses-card-list">
+
+          <div class="expense-entry">
+            <h3>Tuition</h3>
+            <p>The cost for all undergrad programs, according to the U of T website, is $14,180 / year</p>
+          </div>
+
+          <div class="expense-entry">
+            <h3>Transportation</h3>
+            <p>U of T offers their own shuttle bus service that is free for U of T students. To commute around the city, a TTC transit is the most convenient and affordable option. An estimation of the cost will be from the TTC U-pass, which is $70/month. Because the campus is in downtown Toronto, most services can likely be accessible within walking distance.</p>
+          </div>
+
+          <div class="expense-entry">
+            <h3>Food / Housing</h3>
+            <p>In the Chestnut residence, the total cost of housing and an unlimited meal plan is $27,120. Dining out would cost ~$80 more. Students online report spending from $200 - $900 for groceries each month. Outside of the campus dorm, rent costs around $1000 / month for rent, along with $100/month for utilities.</p>
+          </div>
+
+          <div class="expense-entry">
+            <h3>Clothing</h3>
+            <p>Although clothing might not be a monthly expense, occasionally shopping for clothes and shoes are important, as the climate can vary greatly from the seasons of the year. This accounts for ~$50/month.</p>
+          </div>
+
+          <div class="expense-entry">
+            <h3>Phone plans</h3>
+            <p>Phone plans are $50-100, and can depend on the data usage. Sometimes, there would also be promotional events for students.</p>
+          </div>
+
+          <div class="expense-entry">
+            <h3>Academic supplies</h3>
+            <p>The total cost of textbooks and software is around ~$1100, but that is a fixed cost .</p>
+          </div>
+
+          <div class="expense-entry">
+            <h3>Entertainment & subscriptions</h3>
+            <p>These include supplies for hobbies, social activities, and subscriptions for streaming services or educational apps. It is estimated to be around ~$200 / month.</p>
+          </div>
+
+          <div class="expense-entry">
+            <h3>Emergency</h3>
+            <p>This would act as a buffer if there are urgent needs, such as unpaid bills or medical emergencies. People recommend ~$500.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Card 3: Charts -->
+    <section class="app-card" id="card-charts">
+      <div class="card-header">
+        <h2>Expense Breakdown Charts</h2>
+      </div>
+      <div class="card-body">
+        <div class="charts-stack">
+          <div class="chart-box">
+            <h3>Annual Expenses Distribution</h3>
+            <div class="canvas-wrapper">
+              <canvas id="expenseDoughnutChart"></canvas>
             </div>
           </div>
 
-          <div class="kpi-card">
-            <div class="kpi-icon"><i class="fa-solid fa-building-columns"></i></div>
-            <div class="kpi-info">
-              <span class="kpi-label">Annual Tuition</span>
-              <span class="kpi-value">$14,180</span>
-              <span class="kpi-note">All Undergrad programs (U of T website)</span>
-            </div>
-          </div>
-
-          <div class="kpi-card">
-            <div class="kpi-icon"><i class="fa-solid fa-bus"></i></div>
-            <div class="kpi-info">
-              <span class="kpi-label">Transit / Shuttle</span>
-              <span class="kpi-value">$70 / month</span>
-              <span class="kpi-note">Free U of T shuttle + TTC U-Pass</span>
-            </div>
-          </div>
-
-          <div class="kpi-card">
-            <div class="kpi-icon"><i class="fa-solid fa-shield-heart"></i></div>
-            <div class="kpi-info">
-              <span class="kpi-label">Emergency Buffer</span>
-              <span class="kpi-value">$500</span>
-              <span class="kpi-note">Recommended buffer for urgent needs</span>
+          <div class="chart-box">
+            <h3>Housing Pathway Cost Comparison</h3>
+            <div class="canvas-wrapper">
+              <canvas id="expenseBarChart"></canvas>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Expenses & Interactive Charts Section -->
-    <section class="section-block" id="expenses">
-      <div class="section-header">
-        <div class="section-title-wrap">
-          <span class="section-tag">BUDGET & EXPENSES</span>
-          <h2>Potential List of Expenses & Financial Breakdown</h2>
-        </div>
-        <p class="section-intro">
-          Below is the complete breakdown of estimated costs for attending U of T St. George in downtown Toronto, including tuition, housing choices, transit, academic supplies, lifestyle, and emergency buffers.
-        </p>
+    <!-- Card 4: Quotations -->
+    <section class="app-card" id="card-quotes">
+      <div class="card-header">
+        <h2>Quotations</h2>
       </div>
+      <div class="card-body">
+        <div class="quotes-deck">
 
-      <!-- Housing Pathways Comparison Side-by-Side -->
-      <div class="housing-comparison-header">
-        <h3><i class="fa-solid fa-house-user"></i> Housing Pathway Comparison</h3>
-        <p>Comparing On-Campus Dormitory Living vs. Off-Campus Apartment Living in Downtown Toronto</p>
-      </div>
-
-      <div class="housing-cards-grid">
-        <!-- Chestnut Residence Card -->
-        <div class="housing-card active-path">
-          <div class="housing-card-header">
-            <span class="housing-badge primary"><i class="fa-solid fa-bed"></i> Option A: On-Campus</span>
-            <h4>Chestnut Residence</h4>
-            <div class="housing-price">$27,120 <span>/ year</span></div>
-          </div>
-          <div class="housing-body">
-            <p><strong>Includes:</strong> Total cost of housing and an unlimited meal plan.</p>
-            <ul class="housing-features">
-              <li><i class="fa-solid fa-check"></i> Dorm Room & Unlimited Meal Plan included</li>
-              <li><i class="fa-solid fa-plus"></i> Dining out buffer: ~$80 more</li>
-              <li><i class="fa-solid fa-person-walking"></i> Walkable to all downtown campus facilities</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Off-Campus Rent Card -->
-        <div class="housing-card secondary-path">
-          <div class="housing-card-header">
-            <span class="housing-badge alt"><i class="fa-solid fa-city"></i> Option B: Off-Campus</span>
-            <h4>Off-Campus Apartment</h4>
-            <div class="housing-price">~$1,300 - $2,000+ <span>/ month</span></div>
-          </div>
-          <div class="housing-body">
-            <p><strong>Includes:</strong> Rent, utilities, and grocery expenses outside of dorms.</p>
-            <ul class="housing-features">
-              <li><i class="fa-solid fa-circle-dot"></i> Rent: ~$1,000 / month</li>
-              <li><i class="fa-solid fa-bolt"></i> Utilities: ~$100 / month</li>
-              <li><i class="fa-solid fa-cart-shopping"></i> Groceries: $200 – $900 / month (students online report)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Financial Visual Charts Area -->
-      <div class="chart-container-grid">
-        <!-- Chart 1: Cost Distribution Pie Chart -->
-        <div class="chart-card">
-          <div class="chart-card-header">
-            <h3><i class="fa-solid fa-chart-pie"></i> Annual Expense Breakdown (Doughnut Chart)</h3>
-            <p>Distribution of major cost categories for a U of T undergraduate student</p>
-          </div>
-          <div class="chart-canvas-wrapper">
-            <canvas id="expenseDoughnutChart"></canvas>
-          </div>
-        </div>
-
-        <!-- Chart 2: Housing & Expense Comparison Bar Chart -->
-        <div class="chart-card">
-          <div class="chart-card-header">
-            <h3><i class="fa-solid fa-chart-column"></i> Cost Breakdown Comparison (Bar Chart)</h3>
-            <p>Comparing fixed vs. variable annual expenses (Tuition, Housing, Lifestyle)</p>
-          </div>
-          <div class="chart-canvas-wrapper">
-            <canvas id="expenseBarChart"></canvas>
-          </div>
-        </div>
-      </div>
-
-      <!-- Detailed Expenses List Grid with Ray's Exact Writing -->
-      <div class="expenses-grid">
-
-        <div class="expense-item-card">
-          <div class="expense-card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-          <div class="expense-card-content">
-            <div class="expense-card-top">
-              <h4>Tuition</h4>
-              <span class="expense-cost">$14,180 / year</span>
-            </div>
-            <p class="expense-desc">
-              The cost for all undergrad programs, according to the U of T website, is $14,180 / year
-            </p>
-          </div>
-        </div>
-
-        <div class="expense-item-card">
-          <div class="expense-card-icon"><i class="fa-solid fa-train-subway"></i></div>
-          <div class="expense-card-content">
-            <div class="expense-card-top">
-              <h4>Transportation</h4>
-              <span class="expense-cost">$70 / month</span>
-            </div>
-            <p class="expense-desc">
-              U of T offers their own shuttle bus service that is free for U of T students. To commute around the city, a TTC transit is the most convenient and affordable option. An estimation of the cost will be from the TTC U-pass, which is $70/month. Because the campus is in downtown Toronto, most services can likely be accessible within walking distance.
-            </p>
-          </div>
-        </div>
-
-        <div class="expense-item-card">
-          <div class="expense-card-icon"><i class="fa-solid fa-utensils"></i></div>
-          <div class="expense-card-content">
-            <div class="expense-card-top">
-              <h4>Food / Housing</h4>
-              <span class="expense-cost">$27,120 (Chestnut Dorm)</span>
-            </div>
-            <p class="expense-desc">
-              In the Chestnut residence, the total cost of housing and an unlimited meal plan is $27,120. Dining out would cost ~$80 more. Students online report spending from $200 - $900 for groceries each month. Outside of the campus dorm, rent costs around $1000 / month for rent, along with $100/month for utilities.
-            </p>
-          </div>
-        </div>
-
-        <div class="expense-item-card">
-          <div class="expense-card-icon"><i class="fa-solid fa-shirt"></i></div>
-          <div class="expense-card-content">
-            <div class="expense-card-top">
-              <h4>Clothing</h4>
-              <span class="expense-cost">~$50 / month</span>
-            </div>
-            <p class="expense-desc">
-              Although clothing might not be a monthly expense, occasionally shopping for clothes and shoes are important, as the climate can vary greatly from the seasons of the year. This accounts for ~$50/month.
-            </p>
-          </div>
-        </div>
-
-        <div class="expense-item-card">
-          <div class="expense-card-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
-          <div class="expense-card-content">
-            <div class="expense-card-top">
-              <h4>Phone plans</h4>
-              <span class="expense-cost">$50 - $100 / month</span>
-            </div>
-            <p class="expense-desc">
-              Phone plans are $50-100, and can depend on the data usage. Sometimes, there would also be promotional events for students.
-            </p>
-          </div>
-        </div>
-
-        <div class="expense-item-card">
-          <div class="expense-card-icon"><i class="fa-solid fa-book"></i></div>
-          <div class="expense-card-content">
-            <div class="expense-card-top">
-              <h4>Academic supplies</h4>
-              <span class="expense-cost">~$1,100 (Fixed cost)</span>
-            </div>
-            <p class="expense-desc">
-              The total cost of textbooks and software is around ~$1100, but that is a fixed cost .
-            </p>
-          </div>
-        </div>
-
-        <div class="expense-item-card">
-          <div class="expense-card-icon"><i class="fa-solid fa-film"></i></div>
-          <div class="expense-card-content">
-            <div class="expense-card-top">
-              <h4>Entertainment & subscriptions</h4>
-              <span class="expense-cost">~$200 / month</span>
-            </div>
-            <p class="expense-desc">
-              These include supplies for hobbies, social activities, and subscriptions for streaming services or educational apps. It is estimated to be around ~$200 / month.
-            </p>
-          </div>
-        </div>
-
-        <div class="expense-item-card">
-          <div class="expense-card-icon"><i class="fa-solid fa-kit-medical"></i></div>
-          <div class="expense-card-content">
-            <div class="expense-card-top">
-              <h4>Emergency</h4>
-              <span class="expense-cost">~$500 buffer</span>
-            </div>
-            <p class="expense-desc">
-              This would act as a buffer if there are urgent needs, such as unpaid bills or medical emergencies. People recommend ~$500.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Quotes & Reflections Section -->
-    <section class="section-block" id="quotes">
-      <div class="section-header">
-        <div class="section-title-wrap">
-          <span class="section-tag">FINANCIAL WISDOM</span>
-          <h2>Quotations from Credible Sources & Personal Reflections</h2>
-        </div>
-        <p class="section-intro">
-          Reflecting on impactful guidance on saving, borrowing, and budgeting to build sound financial habits.
-        </p>
-      </div>
-
-      <div class="quotes-grid">
-
-        <!-- Quote 1 Card -->
-        <div class="quote-card">
-          <div class="quote-card-header">
-            <i class="fa-solid fa-quote-left quote-icon"></i>
-            <div class="quote-text">
+          <div class="quote-item">
+            <blockquote class="quote-phrase">
               “Beware of little expenses; a small leak will sink a great ship.”
+            </blockquote>
+            <span class="quote-author">— Benjamin Franklin</span>
+            <div class="quote-reflection">
+              <p>This quote is helpful to help me realize that people often pay attention to massive, one time purchases rather than the smaller but regular purchases. In some cases, a habit that consistently requires spending can end up causing a lot more. Expenses such as frequent food deliveries and unused subscription services can drain a student’s budget without them realizing, especially during a time of financial constraints. These small leaks are places where spendings could be reduced, making this quote helpful to realizing that.</p>
             </div>
-            <div class="quote-author">— Benjamin Franklin</div>
           </div>
-          <div class="reflection-box">
-            <div class="reflection-header">
-              <i class="fa-solid fa-lightbulb"></i> Why this quote is helpful:
-            </div>
-            <p class="reflection-text">
-              This quote is helpful to help me realize that people often pay attention to massive, one time purchases rather than the smaller but regular purchases. In some cases, a habit that consistently requires spending can end up causing a lot more. Expenses such as frequent food deliveries and unused subscription services can drain a student’s budget without them realizing, especially during a time of financial constraints. These small leaks are places where spendings could be reduced, making this quote helpful to realizing that.
-            </p>
-          </div>
-        </div>
 
-        <!-- Quote 2 Card -->
-        <div class="quote-card">
-          <div class="quote-card-header">
-            <i class="fa-solid fa-quote-left quote-icon"></i>
-            <div class="quote-text">
+          <div class="quote-item">
+            <blockquote class="quote-phrase">
               “A budget is telling your money where to go, instead of wondering where it went.”
+            </blockquote>
+            <span class="quote-author">— John C. Maxwell</span>
+            <div class="quote-reflection">
+              <p>A budget is the way for students to gauge how much money they have and how much they can spend. Students often receive large amounts of money at once, such as OSAP or other scholarships. Without a budget to organize this money, many students overspend at first and have to compensate down the line by borrowing.</p>
             </div>
-            <div class="quote-author">— John C. Maxwell</div>
           </div>
-          <div class="reflection-box">
-            <div class="reflection-header">
-              <i class="fa-solid fa-lightbulb"></i> Why this quote is helpful:
-            </div>
-            <p class="reflection-text">
-              A budget is the way for students to gauge how much money they have and how much they can spend. Students often receive large amounts of money at once, such as OSAP or other scholarships. Without a budget to organize this money, many students overspend at first and have to compensate down the line by borrowing.
-            </p>
-          </div>
-        </div>
 
+        </div>
       </div>
     </section>
 
-    <!-- Action Plan Section -->
-    <section class="section-block" id="action-plan">
-      <div class="section-header">
-        <div class="section-title-wrap">
-          <span class="section-tag">STRATEGIC ROADMAP</span>
-          <h2>Action Plan: 3 Steps to Prepare Financially</h2>
-        </div>
-        <p class="section-intro">
-          Three concrete steps to take before entering university to secure financial stability and maximize savings.
-        </p>
+    <!-- Card 5: Action Plan -->
+    <section class="app-card" id="card-action-plan">
+      <div class="card-header">
+        <h2>Action Plan</h2>
       </div>
+      <div class="card-body">
+        <div class="action-plan-list">
 
-      <div class="action-steps-wrapper">
-
-        <!-- Step 1 Card -->
-        <div class="action-step-card">
-          <div class="step-badge-wrap">
-            <div class="step-number">1</div>
-            <div class="step-line"></div>
-          </div>
-          <div class="step-content">
-            <div class="step-header">
+          <div class="action-card-step">
+            <div class="step-num">1</div>
+            <div class="step-details">
               <h3>Save early</h3>
-              <span class="step-tag"><i class="fa-solid fa-piggy-bank"></i> RESP & CESG Matching</span>
+              <p>My first action is to start saving $500 a year in an RESP, which grants benefits through reduced costs for students. This goal can be obtained if I can find a part time job, and if my parents can help me contribute to this as well. Saving early, even by a little bit, can increase the money available by a lot because of compound interest. A RESP offers a 20% direct return through the CESG on the first $2500. The money within the account is also tax deferred, meaning that the taxation is delayed and lowers the tax bracket on which the remaining funds are taxed. I will continue saving in the RESP and spending through it until the end of high school.</p>
             </div>
-            <p class="step-text">
-              My first action is to start saving $500 a year in an RESP, which grants benefits through reduced costs for students. This goal can be obtained if I can find a part time job, and if my parents can help me contribute to this as well. Saving early, even by a little bit, can increase the money available by a lot because of compound interest. A RESP offers a 20% direct return through the CESG on the first $2500. The money within the account is also tax deferred, meaning that the taxation is delayed and lowers the tax bracket on which the remaining funds are taxed. I will continue saving in the RESP and spending through it until the end of high school.
-            </p>
-
-            <!-- RESP Calculator Sub-Widget -->
-            <div class="resp-calculator-box">
-              <h4><i class="fa-solid fa-calculator"></i> Interactive RESP CESG 20% Matching Simulator</h4>
-              <div class="resp-inputs">
-                <div class="input-group">
-                  <label for="respAnnual">Annual Contribution ($):</label>
-                  <input type="number" id="respAnnual" value="500" min="0" max="2500" step="50">
-                </div>
-                <div class="input-group">
-                  <label for="respYears">Years to Save (High School):</label>
-                  <input type="number" id="respYears" value="4" min="1" max="10" step="1">
-                </div>
-              </div>
-              <div class="resp-results">
-                <div class="resp-res-item">
-                  <span>Your Deposits:</span>
-                  <strong id="respUserDep">$2,000</strong>
-                </div>
-                <div class="resp-res-item accent">
-                  <span>CESG 20% Free Grant:</span>
-                  <strong id="respGrant">$400</strong>
-                </div>
-                <div class="resp-res-item highlight">
-                  <span>Total Base Savings:</span>
-                  <strong id="respTotal">$2,400</strong>
-                </div>
-              </div>
-            </div>
-
           </div>
-        </div>
 
-        <!-- Step 2 Card -->
-        <div class="action-step-card">
-          <div class="step-badge-wrap">
-            <div class="step-number">2</div>
-            <div class="step-line"></div>
-          </div>
-          <div class="step-content">
-            <div class="step-header">
+          <div class="action-card-step">
+            <div class="step-num">2</div>
+            <div class="step-details">
               <h3>Create a budget</h3>
-              <span class="step-tag"><i class="fa-solid fa-sliders"></i> Pre-University Financial Evaluation</span>
+              <p>Before entering university, I would make a plan measuring all the expenses that would be needed (listed in the costs above), and how I would be able to balance that with a part time job, monthly allowances, or loans. This is a relevant goal, as having a budget can also decrease the financial pressure during the school year, so more attention can be given to academics. It is also an evaluation into my finances, and how it can be changed to be balanced. This would be done in the year before university, so it can most accurately reflect my financial situation going into college.</p>
             </div>
-            <p class="step-text">
-              Before entering university, I would make a plan measuring all the expenses that would be needed (listed in the costs above), and how I would be able to balance that with a part time job, monthly allowances, or loans. This is a relevant goal, as having a budget can also decrease the financial pressure during the school year, so more attention can be given to academics. It is also an evaluation into my finances, and how it can be changed to be balanced. This would be done in the year before university, so it can most accurately reflect my financial situation going into college.
-            </p>
           </div>
-        </div>
 
-        <!-- Step 3 Card -->
-        <div class="action-step-card">
-          <div class="step-badge-wrap">
-            <div class="step-number">3</div>
-          </div>
-          <div class="step-content">
-            <div class="step-header">
+          <div class="action-card-step">
+            <div class="step-num">3</div>
+            <div class="step-details">
               <h3>Look for scholarships</h3>
-              <span class="step-tag"><i class="fa-solid fa-award"></i> U of T Financial Aid & External Awards</span>
+              <p>Lastly, I would complete the U of T Need Navigator profile and financial aid application with admission profiles. These scholarships have no impact on my admission, and can range anyway from $500 a year to full scholarships. These scholarships are also offered by companies and organizations, and completing as many scholarships as possible early on ensures that I am considered for major financial aid. This would also be done before applying to university.</p>
             </div>
-            <p class="step-text">
-              Lastly, I would complete the U of T Need Navigator profile and financial aid application with admission profiles. These scholarships have no impact on my admission, and can range anyway from $500 a year to full scholarships. These scholarships are also offered by companies and organizations, and completing as many scholarships as possible early on ensures that I am considered for major financial aid. This would also be done before applying to university.
-            </p>
           </div>
-        </div>
 
+        </div>
       </div>
     </section>
 
-    <!-- References Section -->
-    <section class="section-block" id="references">
-      <div class="section-header">
-        <div class="section-title-wrap">
-          <span class="section-tag">CITATIONS</span>
-          <h2>References & Credible Sources</h2>
-        </div>
-        <p class="section-intro">
-          Full academic and institutional citations supporting the cost estimates, transportation options, housing fees, and financial quotes.
-        </p>
+    <!-- Card 6: References -->
+    <section class="app-card" id="card-references">
+      <div class="card-header">
+        <h2>References</h2>
       </div>
-
-      <div class="references-list-card">
-        <ol class="references-ol">
-          <li>
-            10 Best Quotes About Saving Money | Lightheart, Sanders and Associates. (2022). 
-            <a href="https://lsa.cpa/2022/07/26/10-best-quotes-about-saving-money/" target="_blank" rel="noopener noreferrer">https://lsa.cpa/2022/07/26/10-best-quotes-about-saving-money/</a>
-          </li>
-          <li>
-            Compare U of T residence fees - UofT student life. (2020a, January 27). UofT Student Life. 
-            <a href="https://www.studentlife.utoronto.ca/task/compare-u-of-t-residence-fees/" target="_blank" rel="noopener noreferrer">https://www.studentlife.utoronto.ca/task/compare-u-of-t-residence-fees/</a>
-          </li>
-          <li>
-            Getting around - University of Toronto Transportation Services. (2021, June 15). University of Toronto Transportation Services. 
-            <a href="http://transportation.utoronto.ca/getting-around/" target="_blank" rel="noopener noreferrer">http://transportation.utoronto.ca/getting-around/</a>
-          </li>
-          <li>
-            Living costs in Toronto - UofT student life. (2020b, January 27). UofT Student Life. 
-            <a href="https://www.studentlife.utoronto.ca/task/living-costs-in-toronto/" target="_blank" rel="noopener noreferrer">https://www.studentlife.utoronto.ca/task/living-costs-in-toronto/</a>
-          </li>
-          <li>
-            Macleans.ca. (2023). What I spent last month as a Canadian university student - macleans.Ca. In Macleans.ca. 
-            <a href="https://macleans.ca/education/spending-budget-university-students/" target="_blank" rel="noopener noreferrer">https://macleans.ca/education/spending-budget-university-students/</a>
-          </li>
-          <li>
-            No free rides: Winners and losers of the TTC u-pass – TransForm. (2018). Torontomu.Ca. 
-            <a href="https://transformlab.torontomu.ca/portfolio-item/winners-losers-ttc-u-pass/" target="_blank" rel="noopener noreferrer">https://transformlab.torontomu.ca/portfolio-item/winners-losers-ttc-u-pass/</a>
-          </li>
-          <li>
-            University of Toronto. (2024). Finances. In Discover Engineering. 
-            <a href="https://discover.engineering.utoronto.ca/finances/" target="_blank" rel="noopener noreferrer">https://discover.engineering.utoronto.ca/finances/</a>
-          </li>
+      <div class="card-body">
+        <ol class="references-list">
+          <li>10 Best Quotes About Saving Money | Lightheart, Sanders and Associates. (2022). <a href="https://lsa.cpa/2022/07/26/10-best-quotes-about-saving-money/" target="_blank">https://lsa.cpa/2022/07/26/10-best-quotes-about-saving-money/</a></li>
+          <li>Compare U of T residence fees - UofT student life. (2020a, January 27). UofT Student Life. <a href="https://www.studentlife.utoronto.ca/task/compare-u-of-t-residence-fees/" target="_blank">https://www.studentlife.utoronto.ca/task/compare-u-of-t-residence-fees/</a></li>
+          <li>Getting around - University of Toronto Transportation Services. (2021, June 15). University of Toronto Transportation Services. <a href="http://transportation.utoronto.ca/getting-around/" target="_blank">http://transportation.utoronto.ca/getting-around/</a></li>
+          <li>Living costs in Toronto - UofT student life. (2020b, January 27). UofT Student Life. <a href="https://www.studentlife.utoronto.ca/task/living-costs-in-toronto/" target="_blank">https://www.studentlife.utoronto.ca/task/living-costs-in-toronto/</a></li>
+          <li>Macleans.ca. (2023). What I spent last month as a Canadian university student - macleans.Ca. In Macleans.ca. <a href="https://macleans.ca/education/spending-budget-university-students/" target="_blank">https://macleans.ca/education/spending-budget-university-students/</a></li>
+          <li>No free rides: Winners and losers of the TTC u-pass – TransForm. (2018). Torontomu.Ca. <a href="https://transformlab.torontomu.ca/portfolio-item/winners-losers-ttc-u-pass/" target="_blank">https://transformlab.torontomu.ca/portfolio-item/winners-losers-ttc-u-pass/</a></li>
+          <li>University of Toronto. (2024). Finances. In Discover Engineering. <a href="https://discover.engineering.utoronto.ca/finances/" target="_blank">https://discover.engineering.utoronto.ca/finances/</a></li>
         </ol>
       </div>
     </section>
 
   </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer-content">
-      <p>© Ray's Financial Toolkit • University of Toronto St. George Campus • Toronto, ON</p>
-      <p class="footer-note">Designed for high school to university financial transition & budgeting strategy.</p>
-    </div>
-  </footer>
+  <!-- Bottom App Navigation Bar -->
+  <nav class="app-bottom-nav">
+    <button class="nav-tab active" data-target="card-overview">
+      <i class="fa-solid fa-compass"></i>
+      <span>Overview</span>
+    </button>
+    <button class="nav-tab" data-target="card-expenses">
+      <i class="fa-solid fa-list-ul"></i>
+      <span>Expenses</span>
+    </button>
+    <button class="nav-tab" data-target="card-charts">
+      <i class="fa-solid fa-chart-pie"></i>
+      <span>Charts</span>
+    </button>
+    <button class="nav-tab" data-target="card-quotes">
+      <i class="fa-solid fa-quote-left"></i>
+      <span>Quotes</span>
+    </button>
+    <button class="nav-tab" data-target="card-action-plan">
+      <i class="fa-solid fa-bullseye"></i>
+      <span>Action Plan</span>
+    </button>
+    <button class="nav-tab" data-target="card-references">
+      <i class="fa-solid fa-book"></i>
+      <span>References</span>
+    </button>
+  </nav>
 
   <script src="app.js"></script>
 </body>
