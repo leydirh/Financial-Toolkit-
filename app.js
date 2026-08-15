@@ -1,11 +1,11 @@
-// Ray's Financial Toolkit App Logic
+// Ray's Financial Toolkit App Logic - Light Blue Theme
 
 document.addEventListener('DOMContentLoaded', () => {
   initCharts();
   initBottomNav();
 });
 
-// Chart.js Initialization with Electric Blue Color Palette
+// Chart.js Initialization with Light Blue & Clean White Styling
 function initCharts() {
   const doughnutCtx = document.getElementById('expenseDoughnutChart');
   const barCtx = document.getElementById('expenseBarChart');
@@ -28,15 +28,15 @@ function initCharts() {
           data: [14180, 27120, 840, 1100, 600, 900, 2400, 500],
           backgroundColor: [
             '#1d4ed8', // Royal Blue
-            '#3b82f6', // Electric Blue
-            '#60a5fa', // Light Blue
-            '#93c5fd', // Soft Sky Blue
-            '#bfdbfe', // Ice Blue
-            '#38bdf8', // Cyan Accent
-            '#1e40af', // Darker Blue
-            '#64748b'  // Slate
+            '#0284c7', // Ocean Blue
+            '#38bdf8', // Light Cyan
+            '#60a5fa', // Sky Blue
+            '#818cf8', // Indigo Tint
+            '#a78bfa', // Soft Purple
+            '#2563eb', // Pure Blue
+            '#64748b'  // Slate Muted
           ],
-          borderColor: '#152243',
+          borderColor: '#ffffff',
           borderWidth: 3
         }]
       },
@@ -47,12 +47,15 @@ function initCharts() {
           legend: {
             position: 'bottom',
             labels: {
-              color: '#94a3b8',
-              font: { family: 'Inter', size: 11 },
+              color: '#334155',
+              font: { family: 'Inter', size: 11.5, weight: '500' },
               padding: 10
             }
           },
           tooltip: {
+            backgroundColor: '#0f172a',
+            titleColor: '#ffffff',
+            bodyColor: '#f8fafc',
             callbacks: {
               label: function(context) {
                 let label = context.label || '';
@@ -75,13 +78,13 @@ function initCharts() {
           {
             label: 'Option A: Chestnut Dorm ($27,120)',
             data: [14180, 27120, 1940, 3500],
-            backgroundColor: '#3b82f6',
+            backgroundColor: '#1d4ed8',
             borderRadius: 6
           },
           {
             label: 'Option B: Off-Campus Apartment ($13,200)',
             data: [14180, 13200, 1940, 3500],
-            backgroundColor: '#60a5fa',
+            backgroundColor: '#38bdf8',
             borderRadius: 6
           }
         ]
@@ -91,14 +94,14 @@ function initCharts() {
         maintainAspectRatio: false,
         scales: {
           x: {
-            grid: { color: 'rgba(255, 255, 255, 0.05)' },
-            ticks: { color: '#94a3b8', font: { family: 'Inter' } }
+            grid: { color: 'rgba(0, 0, 0, 0.05)' },
+            ticks: { color: '#334155', font: { family: 'Inter', weight: '500' } }
           },
           y: {
-            grid: { color: 'rgba(255, 255, 255, 0.05)' },
+            grid: { color: 'rgba(0, 0, 0, 0.05)' },
             ticks: {
-              color: '#94a3b8',
-              font: { family: 'Inter' },
+              color: '#334155',
+              font: { family: 'Inter', weight: '500' },
               callback: function(value) { return '$' + value.toLocaleString(); }
             }
           }
@@ -106,7 +109,7 @@ function initCharts() {
         plugins: {
           legend: {
             position: 'top',
-            labels: { color: '#f8fafc', font: { family: 'Inter', size: 12 } }
+            labels: { color: '#0f172a', font: { family: 'Inter', size: 12, weight: '600' } }
           }
         }
       }
