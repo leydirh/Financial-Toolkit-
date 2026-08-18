@@ -276,7 +276,7 @@ body.light-theme, body {
   line-height: 1.65;
 }
 
-/* Action Plan Images */
+/* Action Plan Images & Canva Link */
 .action-plan-images {
   display: flex;
   flex-direction: column;
@@ -297,6 +297,33 @@ body.light-theme, body {
 .action-plan-img:hover {
   box-shadow: var(--shadow-md);
   border-color: var(--blue-border-hover);
+}
+
+.action-plan-link-box {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.canva-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  background: var(--blue-soft);
+  border: 1px solid var(--blue-border);
+  border-radius: 25px;
+  color: var(--blue-primary);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.canva-link-btn:hover {
+  background: var(--blue-primary);
+  color: #ffffff;
+  border-color: var(--blue-primary);
+  box-shadow: var(--shadow-sm);
 }
 
 /* References List */
